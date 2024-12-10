@@ -8,7 +8,7 @@ class TestQuestion(unittest.TestCase):
     
     @classmethod
     def setUpClass(cls):
-        cls.testpl = rd.Playlist("playlist")
+        cls.testpl = rd.Playlist("spotyour/playlist")
         
     def setUp(self):
         self.question = Question(self.testpl)
@@ -40,7 +40,7 @@ class TestQuestionBuilder(unittest.TestCase):
     
     @classmethod
     def setUpClass(cls):
-        cls.testpl = rd.Playlist("playlist")
+        cls.testpl = rd.Playlist("spotyour/playlist")
         
     def setUp(self):
         self.qBuilder = QuestionBuilder(self.testpl)
@@ -60,35 +60,42 @@ class TestQuestionBuilder(unittest.TestCase):
         self.assertEqual(cur_question, question, f"cur_question: {cur_question} does not match with question: {question}")
         self.assertEqual(cur_options, options, f"cur_options: {cur_options} does not match with options: {options}")
         self.assertEqual(cur_solution, solution, f"cur_solution: {cur_solution} does not match with solution: {solution}")
+        self.assertIsNotNone(question, "question is None")
     
     def test_artist_question(self):
         question, options, solution = self.qBuilder.artist_question()
         self.assertIn(solution, options, "solution is not in the option list")
         self.assertIsInstance(question, str, "question is not string")
         self.assertIn(len(options), [3,4], "option length is not 3 or 4")
+        self.assertIsInstance(solution, str, "solution is not string")
+        
         
     def test_label_question(self):
         question, options, solution = self.qBuilder.label_question()
         self.assertIn(solution, options, "solution is not in the option list")
         self.assertIsInstance(question, str, "question is not string")
         self.assertIn(len(options), [3,4], "option length is not 3 or 4")
+        self.assertIsInstance(solution, str, "solution is not string")
         
     def test_length_question(self):
         question, options, solution = self.qBuilder.length_question()
         self.assertIn(solution, options, "solution is not in the option list")
         self.assertIsInstance(question, str, "question is not string")
         self.assertIn(len(options), [3,4], "option length is not 3 or 4")
+        self.assertIsInstance(solution, str, "solution is not string")
         
     def test_age_question(self):
         question, options, solution = self.qBuilder.age_question()
         self.assertIn(solution, options, "solution is not in the option list")
         self.assertIsInstance(question, str, "question is not string")
         self.assertIn(len(options), [3,4], "option length is not 3 or 4")
+        self.assertIsInstance(solution, str, "solution is not string")
         
     def test_tempo_question(self):
         question, options, solution = self.qBuilder.tempo_question()
         self.assertIn(solution, options, "solution is not in the option list")
         self.assertIsInstance(question, str, "question is not string")
         self.assertIn(len(options), [3,4], "option length is not 3 or 4")
+        self.assertIsInstance(solution, str, "solution is not string")
         
 unittest.main(argv =[''], verbosity=2, exit=False)
