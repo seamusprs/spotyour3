@@ -1,7 +1,7 @@
 # Spot Your Spotify (Project step 2)
 Collaborative programming DATA 533 Project by Seamus Riordan-Short and Jason Samuel Suwito.
 
-> ### IMPORTANT: To run the `testsuite.py`, please make sure to move it outside of the `spotyour2` folder.
+> ### IMPORTANT: To run the `testsuite.py`, please make sure to move it outside of the `spotyour3` folder.
 
 ### Project idea: Personalized Spotify Playlist Stats & Quiz: Spot your Spotify.
 

@@ -1,7 +1,7 @@
 import unittest
 import random
-from spotyour2.stats import readdata as rd
-from spotyour2.quiz.quizbuilder import Question, QuestionBuilder
+from spotyour3.stats import readdata as rd
+from spotyour3.quiz.quizbuilder import Question, QuestionBuilder
 
 class TestQuestion(unittest.TestCase):
     """Test the Question class"""

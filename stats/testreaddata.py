@@ -1,4 +1,4 @@
-import spotyour2.stats.readdata as rd
+import spotyour3.stats.readdata as rd
 import unittest
 import pandas as pd
 
@@ -7,10 +7,10 @@ class TestPlaylist(unittest.TestCase):
 
     @classmethod
     def setUpClass(TestPlaylist):
-        TestPlaylist.testpl = rd.Playlist("spotyour2/playlist")
+        TestPlaylist.testpl = rd.Playlist("spotyour3/playlist")
 
     def setUp(self):
-        self.testpl = rd.Playlist("spotyour2/playlist")
+        self.testpl = rd.Playlist("spotyour3/playlist")
 
     def tearDown(self):
         self.testpl = None
@@ -42,11 +42,11 @@ class TestSong(unittest.TestCase):
 
     @classmethod
     def setUpClass(TestSong):
-        testpl = rd.Playlist("spotyour2/playlist")
+        testpl = rd.Playlist("spotyour3/playlist")
         TestSong.testsong = rd.Song(testpl)
 
     def setUp(self):
-        self.testpl = rd.Playlist("spotyour2/playlist")
+        self.testpl = rd.Playlist("spotyour3/playlist")
         self.testsong = rd.Song(self.testpl, "3QZ7uX97s82HFYSmQUAN1D")
 
     def tearDown(self):

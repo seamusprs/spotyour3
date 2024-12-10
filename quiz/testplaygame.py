@@ -4,8 +4,8 @@ import builtins
 from io import StringIO
 import sys
 
-from spotyour2.stats import readdata as rd
-from spotyour2.quiz.playgame import Game
+from spotyour3.stats import readdata as rd
+from spotyour3.quiz.playgame import Game
 
 class TestPlayGame(unittest.TestCase):
     """Test for the Game class"""
