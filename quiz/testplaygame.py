@@ -4,15 +4,15 @@ import builtins
 from io import StringIO
 import sys
 
-from spotyour3.stats import readdata as rd
-from spotyour3.quiz.playgame import Game
+from stats import readdata as rd
+from quiz.playgame import Game
 
 class TestPlayGame(unittest.TestCase):
     """Test for the Game class"""
 
     @classmethod
     def setUpClass(cls):
-        cls.testpl = rd.Playlist("spotyour3/playlist")
+        cls.testpl = rd.Playlist("playlist")
     
     def setUp(self):
         self.game = Game(self.testpl)

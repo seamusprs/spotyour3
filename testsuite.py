@@ -1,11 +1,11 @@
 import unittest
-from spotyour3.quiz import testquizbuilder as tqb
-from spotyour3.quiz import testplaygame as tpg
+from quiz import testquizbuilder as tqb
+from quiz import testplaygame as tpg
 
 # Please make sure to run this file outside of the spotyour3 folder. 
 
 def stats_suite():
-    tests = unittest.TestLoader().discover(start_dir="spotyour3/stats", pattern="test*.py")
+    tests = unittest.TestLoader().discover(start_dir="stats", pattern="test*.py")
     # print("Tests: ", tests)
     if __name__ == "__main__":
         unittest.TextTestRunner(verbosity=2).run(tests)

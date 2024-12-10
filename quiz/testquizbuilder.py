@@ -1,14 +1,14 @@
 import unittest
 import random
-from spotyour3.stats import readdata as rd
-from spotyour3.quiz.quizbuilder import Question, QuestionBuilder
+from stats import readdata as rd
+from quiz.quizbuilder import Question, QuestionBuilder
 
 class TestQuestion(unittest.TestCase):
     """Test the Question class"""
     
     @classmethod
     def setUpClass(cls):
-        cls.testpl = rd.Playlist("spotyour3/playlist")
+        cls.testpl = rd.Playlist("playlist")
         
     def setUp(self):
         self.question = Question(self.testpl)
@@ -40,7 +40,7 @@ class TestQuestionBuilder(unittest.TestCase):
     
     @classmethod
     def setUpClass(cls):
-        cls.testpl = rd.Playlist("spotyour3/playlist")
+        cls.testpl = rd.Playlist("playlist")
         
     def setUp(self):
         self.qBuilder = QuestionBuilder(self.testpl)

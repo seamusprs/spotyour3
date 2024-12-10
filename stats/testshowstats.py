@@ -1,4 +1,4 @@
-from spotyour3.stats import showstats as ss
+from stats import showstats as ss
 import unittest
 
 class TestPlaylistSs(unittest.TestCase):
@@ -6,10 +6,10 @@ class TestPlaylistSs(unittest.TestCase):
 
     @classmethod
     def setUpClass(TestPlaylistSs):
-        TestPlaylistSs.testpl = ss.Playlist("spotyour3/playlist")
+        TestPlaylistSs.testpl = ss.Playlist("playlist")
 
     def setUp(self):
-        self.testpl = ss.Playlist("spotyour3/playlist")
+        self.testpl = ss.Playlist("playlist")
 
     def tearDown(self):
         self.testpl = None
