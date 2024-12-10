@@ -8,7 +8,7 @@ class TestQuestion(unittest.TestCase):
     
     @classmethod
     def setUpClass(cls):
-        cls.testpl = rd.Playlist("spotyour/playlist")
+        cls.testpl = rd.Playlist("spotyour3/playlist")
         
     def setUp(self):
         self.question = Question(self.testpl)
@@ -40,7 +40,7 @@ class TestQuestionBuilder(unittest.TestCase):
     
     @classmethod
     def setUpClass(cls):
-        cls.testpl = rd.Playlist("spotyour/playlist")
+        cls.testpl = rd.Playlist("spotyour3/playlist")
         
     def setUp(self):
         self.qBuilder = QuestionBuilder(self.testpl)

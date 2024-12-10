@@ -12,7 +12,7 @@ class TestPlayGame(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.testpl = rd.Playlist("spotyour/playlist")
+        cls.testpl = rd.Playlist("spotyour3/playlist")
     
     def setUp(self):
         self.game = Game(self.testpl)

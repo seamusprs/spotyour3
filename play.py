@@ -1,5 +1,5 @@
-from spotyour3.stats import showstats as ss
-from spotyour3.quiz import playgame as pg
+from .stats import showstats as ss
+from .quiz import playgame as pg
 
 class StartQuizError(Exception):
     pass
@@ -13,7 +13,7 @@ while inp != "exit":
     inp = input("Enter path to playlist csv without file extension: ").lower()
     if inp == "":
         try:
-            pl = ss.Playlist("playlist")
+            pl = ss.Playlist("spotyour3/playlist")
         except:
             print("Default playlist not found!")
             continue

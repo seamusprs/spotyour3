@@ -1,4 +1,4 @@
-import spotyour3.stats.readdata as rd
+import readdata as rd
 import unittest
 import pandas as pd
 

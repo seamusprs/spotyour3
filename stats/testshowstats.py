@@ -1,4 +1,4 @@
-import spotyour3.stats.showstats as ss
+from spotyour3.stats import showstats as ss
 import unittest
 
 class TestPlaylistSs(unittest.TestCase):
