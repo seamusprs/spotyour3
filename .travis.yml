@@ -1,6 +1,7 @@
 language: python
 python:
-- "3.4"
+- "main"
+- "3.13"
 - "3.12"
 script:
 - python testsuite.py
