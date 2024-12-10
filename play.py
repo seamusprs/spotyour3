@@ -1,6 +1,9 @@
 from spotyour3.stats import showstats as ss
 from spotyour3.quiz import playgame as pg
 
+class StartQuizError(Exception):
+    pass
+
 print("Welcome to Spot Your Spotify!")
 print("Please select a playlist.")
 
@@ -8,7 +11,12 @@ inp = ""
 
 while inp != "exit":
     inp = input("Enter path to playlist csv without file extension: ").lower()
-    if inp == "": pl = ss.Playlist("playlist")
+    if inp == "":
+        try:
+            pl = ss.Playlist("playlist")
+        except:
+            print("Default playlist not found!")
+            continue
     else:
         try:
             pl = ss.Playlist(inp)
@@ -24,8 +32,15 @@ while inp != "exit":
         elif inp == "stats": 
             pl.plstats()
         elif inp == "quiz": 
-            quiz = pg.Game(pl)
-            quiz.play()
+            try:
+                quiz = pg.Game(pl)
+                quiz.play()
+            except NameError:
+                print("Could not access playlist to create quiz, please try selecting a new playlist file")
+            except:
+                print("Could not start quiz!")
+                raise StartQuizError
+            
         else:
             print("Input not accepted, please try again")
             continue

@@ -1,6 +1,9 @@
 import pandas as pd
 import random
 
+class ReadCsvError(Exception):
+    pass
+
 class Playlist():
     """
     A class for playlist managing and interaction.
@@ -53,8 +56,16 @@ class Playlist():
     """
     
     def __init__(self, filename):
-        self.filename = filename
-        self.__df = pd.read_csv(filename + ".csv")
+        try:
+            self.filename = filename
+        except:
+            print("No filename to get playlist from!")
+            raise
+        try:
+            self.__df = pd.read_csv(filename + ".csv")
+        except:
+            print("Something went wrong reading the playlist into a dataframe!")
+            raise ReadCsvError
 
     def showtable(self):
         """Prints the playlist data as a table,"""
