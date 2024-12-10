@@ -1,6 +1,5 @@
 language: python
 python:
-- "main"
 - "3.13"
 - "3.12"
 script:
