@@ -4,6 +4,12 @@ Collaborative programming DATA 533 Project by Seamus Riordan-Short and Jason Sam
 Travis CI passing build stamp:
 [![Build Status](https://app.travis-ci.com/seamusprs/spotyour3.svg?token=7UF1azKGExT8qQ7H4BEq&branch=main)](https://app.travis-ci.com/seamusprs/spotyour3)
 
+
+> 🚀 **This project is now live on https://pypi.org/project/SpotYourSpotify**
+>
+> Install it now with: `pip install SpotYourSpotify`
+
+
 ### Project idea: Personalized Spotify Playlist Stats & Quiz: Spot your Spotify.
 
 A package that contains two subpackages: stats and quiz. Stats allows users to gain insights about their Spotify playlist such as top artist, longest song, slowest song, etc. Quiz allows users to enter a game where they will be questioned on how well they know their playlist. The program will read a CSV file of the user playlist that users can obtain using Exportify.
